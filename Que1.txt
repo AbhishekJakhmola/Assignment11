@@ -1,0 +1,15 @@
+from threading import *
+
+import time
+
+def display():
+
+    time.sleep(10)
+
+    print("After 10 seconds thread executes.")
+
+t= Thread(target = display)
+
+t.start()
+
+print("This is main thread.")
