@@ -1,0 +1,19 @@
+from threading import *
+
+from math import *
+
+def display(n):
+
+    print("This is child thread.")
+
+    x = factorial(n)
+
+    print("The factorial is {}".format(x))
+
+num=int(input("Enter the number to find factorial :"))
+
+t= Thread(target = display,args = (num,))
+
+t.start()
+
+print("This is main thread.")
