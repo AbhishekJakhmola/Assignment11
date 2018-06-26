@@ -1,0 +1,19 @@
+from threading import *
+
+import time
+
+def display():
+
+    print("This is child thread.")
+
+    for i in range(10):
+
+        time.sleep(1)
+
+        print("{}".format(1+i))
+
+t= Thread(target = display)
+
+t.start()
+
+print("This is main thread.")
